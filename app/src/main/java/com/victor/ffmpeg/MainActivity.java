@@ -58,14 +58,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                String[] command =  FFmpegUtil.mergeVideo("/sdcard/DCIM/Camera/dy.mp4","/sdcard/end.mp4","/sdcard/ffmpeg/output_concat.mp4");
 //                String[] command =  FFmpegUtil.replaceVoiceAddWatermask("/sdcard/Pictures/1560138792324.jpg","/sdcard/dlj.mp3","/sdcard/ffmpeg/output_voice_water.mp4");
 
-                exec("ffmpeg -y -ss 2 -t 8 -accurate_seek -i /sdcard/DCIM/Camera/dy.mp4 -codec copy /sdcard/ffmpeg_out_video.mp4".split(" "));
+                String[] argv = "ffmpeg -y -ss 2 -t 8 -accurate_seek -i /sdcard/dy.mp4 -codec copy /sdcard/ffmpeg_out_video.mp4".split(" ");
+                exec(argv);
 //                exec(command);
                 break;
         }
     }
 
     private void exec (String[] argv) {
-
         mFFmpegCmd.exec(argv,0, new FFmpegCmd.OnCmdExecListener() {
             @Override
             public void onSuccess() {
