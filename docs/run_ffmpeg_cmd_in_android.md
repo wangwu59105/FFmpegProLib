@@ -1,6 +1,6 @@
 ## 在Android项目中调用FFmpeg命令
 
-## Step1: 创建之初C++的工程如下图：
+## Step1: 创建支持C++的工程如下图：
 
 - ![image](https://github.com/Victor2018/FFmpegProLib/raw/master/docs/img/create_project.png)
 
