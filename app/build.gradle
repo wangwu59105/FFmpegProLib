@@ -27,4 +27,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation project(':library')
+
+    implementation 'com.github.Victor2018:PermissionHelper:v1.0'
 }

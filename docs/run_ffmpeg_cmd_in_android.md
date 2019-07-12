@@ -152,14 +152,14 @@ void exit_program(int ret) {
     //exit(ret);
 }
 
-## Step5:编写JNI调用FFmpeg命令,在项目中查看如下代码
+## Step6:编写JNI调用FFmpeg命令,在项目中查看如下代码
 src/main/cpp/ffmpeg_cmd.h
 src/main/cpp/ffmpeg_cmd.c
 src/main/cpp/ffmpeg_thread.h
 src/main/cpp/ffmpeg_thread.c
 src/main/java/com.victor.library.FFmpegCmd.java
 
-## Step6: 调用FFmpeg命令
+## Step7: 调用FFmpeg命令
 String[] argv = "ffmpeg -y -ss 2 -t 8 -accurate_seek -i /sdcard/DCIM/Camera/dy.mp4 -codec copy /sdcard/ffmpeg_out_video.mp4".split(" ");
 private void exec (String[] argv) {
         mFFmpegCmd.exec(argv,0, new FFmpegCmd.OnCmdExecListener() {

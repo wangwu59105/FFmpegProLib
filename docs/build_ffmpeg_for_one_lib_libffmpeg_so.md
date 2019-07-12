@@ -14,7 +14,8 @@
 ## [官网下载FFmpeg源码](http://ffmpeg.org/download.html#repositories)
 
 ## 配置configure
-- 这个是因为编译so的名称修改，android识别必须后缀为so。不改的话生成的so需要手动重命名。
+这个是因为编译so的名称修改，android识别必须后缀为so。不改的话生成的so需要手动重命名。
+
 SLIBNAME_WITH_MAJOR='$(SLIBNAME).$(LIBMAJOR)'
 LIB_INSTALL_EXTRA_CMD='$$(RANLIB) "$(LIBDIR)/$(LIBNAME)"'
 SLIB_INSTALL_NAME='$(SLIBNAME_WITH_VERSION)'
