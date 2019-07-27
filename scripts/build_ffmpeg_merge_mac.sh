@@ -9,8 +9,8 @@ export LIBS_DIR=$(pwd)/android/$AOSP_ABI
 echo "LIBS_DIR="$LIBS_DIR
 
 
-export PLATFORM=$ANDROID_NDK_ROOT/platforms/$AOSP_API/$AOSP_ARCH
-export TOOLCHAIN=$ANDROID_NDK_ROOT/toolchains/$TOOLCHAIN_BASE-$AOSP_TOOLCHAIN_SUFFIX/prebuilt/darwin-x86_64
+export PLATFORM=$NDK/platforms/$AOSP_API/$AOSP_ARCH
+export TOOLCHAIN=$NDK/toolchains/$TOOLCHAIN_BASE-$AOSP_TOOLCHAIN_SUFFIX/prebuilt/darwin-x86_64
 
 #编译后的文件会放置在 当前路径下的android/$AOSP_ABI／下
 export PREFIX=$LIBS_DIR

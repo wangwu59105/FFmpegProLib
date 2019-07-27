@@ -114,3 +114,4 @@ echo "AOSP_ABI="$AOSP_ABI
 echo "AOSP_ARCH="$AOSP_ARCH
 echo "AOSP_FLAGS="$AOSP_FLAGS
 echo "HOST="$HOST
+echo "NDK="$NDK
