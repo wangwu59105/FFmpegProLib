@@ -1,6 +1,11 @@
-package com.victor.library;
+package com.sf.ffmpeg.cmd;
 
 import android.annotation.SuppressLint;
+
+import androidx.annotation.NonNull;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /*
  * -----------------------------------------------------------------
@@ -187,5 +192,37 @@ public class FFmpegUtil {
         String cmd = "ffmpeg -loop 1 -i %s -i %s -strict experimental -s 1280x720 -r 25 -aspect 16:9 -vcodec mpeg4 -vcodec mpeg4 -ab 48000 -ac 2 -b 2097152 -ar 22050 -shortest %s";
         cmd = String.format(cmd,imgFile,voiceFile,targetFile);
         return cmd.split(" ");
+    }
+
+
+    /**
+     * 每秒抽多少帧
+     * @param srcPath
+     * @param pngPath
+     * @param speed
+     * @return
+     */
+    public static String[] getVideoExtract(@NonNull String srcPath, @NonNull String pngPath, int speed) {
+
+        List<String> cmdList = new ArrayList<String>();
+        cmdList.add("ffmpeg");
+
+        cmdList.add("-threads");
+        cmdList.add("1");
+
+        cmdList.add("-i");
+        cmdList.add(srcPath);
+
+        cmdList.add("-r");
+        cmdList.add(String.valueOf(speed));
+
+        cmdList.add("-f");
+        cmdList.add("image2");
+
+        cmdList.add(pngPath+"%d.jpg");
+
+        String[] cmds = new String[cmdList.size()];
+        cmdList.toArray(cmds);
+        return cmds;
     }
 }

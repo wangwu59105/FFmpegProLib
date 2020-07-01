@@ -1,4 +1,4 @@
-package com.victor.library;
+package com.sf.ffmpeg.cmd;
 
 /*
  * -----------------------------------------------------------------
@@ -26,7 +26,9 @@ public class FFmpegCmd {
     public static void exec(String[] cmds, long duration, OnCmdExecListener listener) {
         sOnCmdExecListener = listener;
         sDuration = duration;
-
+        if (sOnCmdExecListener != null) {
+            sOnCmdExecListener.onStart();
+        }
         exec(cmds.length, cmds);
     }
 
@@ -60,5 +62,7 @@ public class FFmpegCmd {
         void onFailure(int ret);
 
         void onProgress(float progress);
+
+        void onStart();
     }
 }

@@ -65,7 +65,7 @@ void ffmpeg_progress(float progress) {
 }
 
 JNIEXPORT jint JNICALL
-Java_com_victor_library_FFmpegCmd_exec(JNIEnv *env, jclass clazz, jint cmdnum, jobjectArray cmdline)
+Java_com_sf_ffmpeg_cmd_FFmpegCmd_exec(JNIEnv *env, jclass clazz, jint cmdnum, jobjectArray cmdline)
 {
     (*env)->GetJavaVM(env, &jvm);
     m_clazz = (*env)->NewGlobalRef(env, clazz);
@@ -97,7 +97,7 @@ Java_com_victor_library_FFmpegCmd_exec(JNIEnv *env, jclass clazz, jint cmdnum, j
 }
 
 JNIEXPORT void JNICALL
-Java_com_victor_library_FFmpegCmd_exit(JNIEnv *env, jclass type)
+Java_com_sf_ffmpeg_cmd_FFmpegCmd_exit(JNIEnv *env, jclass type)
 {
 
 

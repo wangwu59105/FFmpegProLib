@@ -2,15 +2,15 @@
 #include <jni.h>
 /* Header for class JniTest_FFmpegCmd */
 
-#ifndef _Included_com_victor_library_FFmpeg_Cmd
-#define _Included_com_victor_library_FFmpeg_Cmd
+#ifndef _Included_com_sf_ffmpeg_cmd_FFmpeg_Cmd
+#define _Included_com_sf_ffmpeg_cmd_FFmpeg_Cmd
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-JNIEXPORT jint JNICALL Java_com_victor_library_FFmpegCmd_exec(JNIEnv *, jclass, jint, jobjectArray);
+JNIEXPORT jint JNICALL Java_com_sf_ffmpeg_cmd_FFmpegCmd_exec(JNIEnv *, jclass, jint, jobjectArray);
 
-JNIEXPORT void JNICALL Java_com_victor_library_FFmpegCmd_exit(JNIEnv *, jclass);
+JNIEXPORT void JNICALL Java_com_sf_ffmpeg_cmd_FFmpegCmd_exit(JNIEnv *, jclass);
 
 #ifdef __cplusplus
 }
